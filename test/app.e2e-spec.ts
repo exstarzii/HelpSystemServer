@@ -19,8 +19,8 @@ describe('AppController (e2e)', () => {
     return request(app.getHttpServer())
       .get('/designers')
       .expect(200)
-      .expect([{'_id':0,'fio':'Username1'},
-              {'_id':1,'fio':'Username2'}
+      .expect([{"_id":0,"fio":"Username1"},
+              {"_id":1,"fio":"Username2"}
               ]);
   });
 
