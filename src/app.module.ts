@@ -6,7 +6,7 @@ import { Designer, DesignerSchema} from './schemas/designer.schema';
 import { SysRequest, SysRequestSchema } from './schemas/sysrequest.schema';
 import { ConfigModule } from '@nestjs/config';
 
-@Module({ //mongodb://localhost:27017
+@Module({
   imports: [ConfigModule.forRoot(),
             MongooseModule.forRoot(process.env.MONGODB_URI),
             MongooseModule.forFeature([{ name: Designer.name, schema: DesignerSchema }, 
