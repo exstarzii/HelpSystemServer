@@ -1,4 +1,11 @@
-import { Body, Controller, Get, Post, UsePipes, ValidationPipe  } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Post,
+  UsePipes,
+  ValidationPipe,
+} from '@nestjs/common';
 import { AppService } from './app.service';
 import { SysRequestDto } from './dto/sys-request.dto';
 import { Designer } from './schemas/designer.schema';
@@ -25,8 +32,7 @@ export class AppController {
   }
 
   @Get('/designers')
-  async getDesigners(): Promise<Designer[]>  {
+  async getDesigners(): Promise<Designer[]> {
     return this.appService.getDesigners();
   }
 }
-
